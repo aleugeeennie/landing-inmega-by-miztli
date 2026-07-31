@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitud recibida | Inmega</title>
+  <meta name="description" content="Inmega recibió tu solicitud de demostración de PainIndex.">
+  <link rel="icon" href="assets/logos/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="thanks-page">
+    <section class="dark-section thanks-left">
+      <canvas class="particles" aria-hidden="true"></canvas>
+      <div class="thanks-content">
+        <img src="assets/logos/inmega-logo.png" alt="Inmega" width="183" height="58">
+        <span class="eyebrow eyebrow-dark">Solicitud registrada</span>
+        <h1>Ya tenemos el contexto inicial.</h1>
+        <p>El equipo de Inmega revisará tu operación para preparar una demostración enfocada en tus sucursales, reseñas y objetivos.</p>
+        <div class="thanks-actions">
+          <a class="button button-light" id="whatsappThanks" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Continuar por WhatsApp</a>
+          <a class="button button-ghost thanks-ghost" href="index.html">Volver al inicio</a>
+        </div>
+        <div class="lead-summary" id="leadSummary" aria-live="polite"></div>
+      </div>
+    </section>
+    <section class="thanks-right">
+      <div class="thanks-card floating-card">
+        <span class="icon-box"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+        <h2>Mientras te contactamos</h2>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Ten a la mano el número de sucursales.</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Identifica tus principales fuentes de reseñas.</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Define qué necesita ver Dirección y Operaciones.</li>
+        </ul>
+        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo empresarial revisando información en una pantalla" loading="lazy" width="1200" height="800">
+        <p><strong>Inmega:</strong> Monterrey, N.L., México · Operación nacional.</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      let lead = {};
+      try { lead = JSON.parse(sessionStorage.getItem('inmegaLead') || '{}'); } catch(e) {}
+      const summary = document.getElementById('leadSummary');
+      if (lead.nombre) {
+        summary.innerHTML = `<strong>${lead.nombre}</strong><span>Sucursales: ${lead.sucursales || ''}</span><span>Reseñas por sucursal: ${lead.reviews || ''}</span><span>Objetivo: ${lead.objetivo || ''}</span>`;
+      }
+      const msg = `Hola, acabo de solicitar una demostración de PainIndex.%0A%0ANombre: ${encodeURIComponent(lead.nombre || '')}%0ASucursales: ${encodeURIComponent(lead.sucursales || '')}%0AReseñas por sucursal: ${encodeURIComponent(lead.reviews || '')}%0AObjetivo: ${encodeURIComponent(lead.objetivo || '')}`;
+      document.getElementById('whatsappThanks').href = `https://wa.me/525569789772?text=${msg}`;
+    })();
+  </script>
+</body>
+</html>

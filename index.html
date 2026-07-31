@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PainIndex de Inmega | Índice de Dolor en tiempo real</title>
+  <meta name="description" content="Centraliza las reseñas de Google Maps y Marketplaces. Optimiza tu operación sin los costos ocultos del software tradicional.">
+  <meta property="og:title" content="PainIndex de Inmega">
+  <meta property="og:description" content="Descubre el Índice de Dolor de tus franquicias en tiempo real.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logos/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Inmega, inicio">
+        <img class="brand-logo brand-logo-light" src="assets/logos/inmega-logo-black.png" alt="Inmega" width="334" height="188">
+        <img class="brand-logo brand-logo-dark" src="assets/logos/inmega-logo-white.png" alt="" aria-hidden="true" width="334" height="188">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#capacidades">Capacidades</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#plan">Plan corporativo</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a class="button button-small" href="#demo" data-demo-focus>Prueba la demo</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegación móvil">
+      <a href="#capacidades">Capacidades</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#plan">Plan corporativo</a>
+      <a href="#faq">FAQ</a>
+      <a class="button" href="#demo" data-demo-focus>Prueba la demo</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero light-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> PainIndex de Inmega</span>
+          <h1>Descubre el “Índice de Dolor” de tus franquicias en tiempo real.</h1>
+          <p class="hero-sub">Centraliza las reseñas de Google Maps y Marketplaces. Optimiza tu operación sin los costos ocultos del software tradicional.</p>
+          <div class="hero-actions">
+            <a class="button" href="#demo" data-demo-focus>Prueba la demo</a>
+            <a class="button button-ghost" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <p class="proof-line"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Más de 6 corporativos ya confían en Inmega.</p>
+        </div>
+
+        <div class="dashboard-shell floating-card reveal" aria-label="Vista ilustrativa del dashboard PainIndex">
+          <svg class="dashboard-svg" viewBox="0 0 760 560" role="img" aria-labelledby="dashTitle dashDesc">
+            <title id="dashTitle">Dashboard animado de PainIndex</title>
+            <desc id="dashDesc">Representación visual de reseñas, sucursales, alertas y tendencias operativas.</desc>
+            <defs>
+              <linearGradient id="dashBg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#10282a"/>
+                <stop offset="1" stop-color="#071516"/>
+              </linearGradient>
+              <linearGradient id="greenGrad" x1="0" x2="1">
+                <stop offset="0" stop-color="#8fd3c2"/>
+                <stop offset="1" stop-color="#12b886"/>
+              </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect x="10" y="10" width="740" height="540" rx="30" fill="url(#dashBg)" stroke="#31565a"/>
+            <rect x="34" y="35" width="692" height="54" rx="14" fill="#123034"/>
+            <circle cx="65" cy="62" r="9" fill="#12b886"/>
+            <text x="88" y="68" fill="#effff9" font-family="Manrope" font-size="20" font-weight="700">PainIndex Dashboard</text>
+            <text x="590" y="68" fill="#9dc6bd" font-family="Manrope" font-size="14">Tiempo real</text>
+            <circle cx="690" cy="62" r="7" fill="#12b886" class="pulse-dot"/>
+
+            <g class="metric metric-a">
+              <rect x="34" y="110" width="205" height="110" rx="18" fill="#15383a" stroke="#2b5558"/>
+              <text x="55" y="143" fill="#9dc6bd" font-size="14" font-family="Manrope">Sucursales analizadas</text>
+              <text x="55" y="194" fill="#ffffff" font-size="40" font-weight="800" font-family="Space Grotesk">24</text>
+              <path d="M150 190 l15 -20 15 11 18 -30 18 10" fill="none" stroke="url(#greenGrad)" stroke-width="5" stroke-linecap="round" class="draw-line"/>
+            </g>
+
+            <g class="metric metric-b">
+              <rect x="255" y="110" width="205" height="110" rx="18" fill="#15383a" stroke="#2b5558"/>
+              <text x="276" y="143" fill="#9dc6bd" font-size="14" font-family="Manrope">Reseñas procesadas</text>
+              <text x="276" y="194" fill="#ffffff" font-size="40" font-weight="800" font-family="Space Grotesk">8.4k</text>
+              <circle cx="420" cy="174" r="26" fill="#0c2325" stroke="#12b886" stroke-width="6" stroke-dasharray="120 44" transform="rotate(-90 420 174)" class="ring-animate"/>
+            </g>
+
+            <g class="metric metric-c">
+              <rect x="476" y="110" width="250" height="110" rx="18" fill="#15383a" stroke="#2b5558"/>
+              <text x="497" y="143" fill="#9dc6bd" font-size="14" font-family="Manrope">Alertas operativas</text>
+              <text x="497" y="194" fill="#ffffff" font-size="40" font-weight="800" font-family="Space Grotesk">12</text>
+              <g transform="translate(661 173)" filter="url(#glow)">
+                <circle r="29" fill="#431b23"/>
+                <path d="M0 -15 L16 14 H-16 Z" fill="#ff6b6b"/>
+                <rect x="-2" y="-5" width="4" height="10" fill="#fff"/>
+                <circle cy="9" r="2" fill="#fff"/>
+              </g>
+            </g>
+
+            <rect x="34" y="240" width="445" height="278" rx="20" fill="#102c2f" stroke="#2b5558"/>
+            <text x="58" y="275" fill="#effff9" font-size="17" font-weight="700" font-family="Manrope">Tendencia del Índice de Dolor</text>
+            <line x1="62" y1="470" x2="445" y2="470" stroke="#31565a"/>
+            <line x1="62" y1="315" x2="62" y2="470" stroke="#31565a"/>
+            <path d="M70 430 C125 395,155 445,205 382 S290 335,330 360 S390 320,440 300" fill="none" stroke="url(#greenGrad)" stroke-width="8" stroke-linecap="round" class="chart-path"/>
+            <path d="M70 430 C125 395,155 445,205 382 S290 335,330 360 S390 320,440 300 L440 470 L70 470 Z" fill="url(#greenGrad)" opacity=".12"/>
+            <g fill="#12b886">
+              <circle cx="70" cy="430" r="7"/><circle cx="205" cy="382" r="7"/><circle cx="330" cy="360" r="7"/><circle cx="440" cy="300" r="7"/>
+            </g>
+
+            <rect x="497" y="240" width="229" height="278" rx="20" fill="#102c2f" stroke="#2b5558"/>
+            <text x="519" y="275" fill="#effff9" font-size="17" font-weight="700" font-family="Manrope">Temas críticos</text>
+            <g font-family="Manrope" font-size="13">
+              <text x="519" y="318" fill="#cce4dd">Tiempo de espera</text>
+              <rect x="519" y="331" width="178" height="10" rx="5" fill="#203f42"/>
+              <rect x="519" y="331" width="142" height="10" rx="5" fill="#ff7b72" class="bar bar-1"/>
+              <text x="519" y="377" fill="#cce4dd">Atención</text>
+              <rect x="519" y="390" width="178" height="10" rx="5" fill="#203f42"/>
+              <rect x="519" y="390" width="108" height="10" rx="5" fill="#f5c451" class="bar bar-2"/>
+              <text x="519" y="436" fill="#cce4dd">Producto</text>
+              <rect x="519" y="449" width="178" height="10" rx="5" fill="#203f42"/>
+              <rect x="519" y="449" width="76" height="10" rx="5" fill="#12b886" class="bar bar-3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+    </section>
+
+    <section class="sector-strip light-section" aria-label="Sectores atendidos">
+      <div class="container sector-row">
+        <span>Diseñado para:</span>
+        <strong><i class="fa-solid fa-store" aria-hidden="true"></i> Franquicias</strong>
+        <strong><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Retail</strong>
+        <strong><i class="fa-solid fa-industry" aria-hidden="true"></i> Operaciones nacionales</strong>
+        <strong><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Marketplaces</strong>
+      </div>
+    </section>
+
+    <section class="dark-section value-section particles-section" id="capacidades">
+      <canvas class="particles" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow eyebrow-dark">PainIndex</span>
+          <h2>Centraliza las reseñas de Google Maps y Marketplaces.</h2>
+          <p>Optimiza tu operación sin los costos ocultos del software tradicional.</p>
+        </div>
+
+        <div class="value-map reveal">
+          <svg class="value-svg" viewBox="0 0 1100 700" role="img" aria-labelledby="valueTitle valueDesc">
+            <title id="valueTitle">Diagrama de capacidades de PainIndex</title>
+            <desc id="valueDesc">Cuatro capacidades conectadas a un núcleo central de inteligencia operativa.</desc>
+            <defs>
+              <radialGradient id="coreFill">
+                <stop offset="0" stop-color="#45e0b2"/>
+                <stop offset=".45" stop-color="#137f67"/>
+                <stop offset="1" stop-color="#082c2b"/>
+              </radialGradient>
+              <filter id="coreGlow"><feGaussianBlur stdDeviation="12" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle cx="550" cy="350" r="188" fill="none" stroke="#2b5b59" stroke-width="2" stroke-dasharray="8 12" class="orbit orbit-a"/>
+            <circle cx="550" cy="350" r="132" fill="none" stroke="#204947" stroke-width="2" class="orbit orbit-b"/>
+            <g class="connector-lines" stroke="#79d8c1" stroke-width="2" fill="none">
+              <path d="M420 235 L310 145 L145 145"/>
+              <path d="M680 235 L790 145 L955 145"/>
+              <path d="M420 465 L310 555 L145 555"/>
+              <path d="M680 465 L790 555 L955 555"/>
+            </g>
+            <g class="data-pulse">
+              <circle r="5" fill="#b8ffeb"><animateMotion dur="3.6s" repeatCount="indefinite" path="M145 145 L310 145 L420 235"/></circle>
+              <circle r="5" fill="#b8ffeb"><animateMotion dur="4.2s" repeatCount="indefinite" path="M955 145 L790 145 L680 235"/></circle>
+              <circle r="5" fill="#b8ffeb"><animateMotion dur="3.8s" repeatCount="indefinite" path="M145 555 L310 555 L420 465"/></circle>
+              <circle r="5" fill="#b8ffeb"><animateMotion dur="4.5s" repeatCount="indefinite" path="M955 555 L790 555 L680 465"/></circle>
+            </g>
+            <g class="core-node" filter="url(#coreGlow)">
+              <circle cx="550" cy="350" r="116" fill="#0a3231" stroke="#8af0d2" stroke-width="4"/>
+              <circle cx="550" cy="350" r="92" fill="#effff9"/>
+              <image href="assets/logos/inmega-mark.png" x="468" y="290" width="164" height="120" preserveAspectRatio="xMidYMid meet"/>
+              <text x="550" y="497" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Space Grotesk">PainIndex</text>
+            </g>
+            
+          </svg>
+
+          <article class="value-copy value-top-left floating-card">
+            <span class="number">01</span>
+            <h3>Benchmarking competitivo</h3>
+            <p>Compara servicio, percepción y posicionamiento para detectar por qué los clientes eligen otras opciones.</p>
+          </article>
+          <article class="value-copy value-top-right floating-card">
+            <span class="number">02</span>
+            <h3>Análisis con inteligencia artificial</h3>
+            <p>Clasifica y subcategoriza miles de reseñas sin depender de procesos manuales.</p>
+          </article>
+          <article class="value-copy value-bottom-left floating-card">
+            <span class="number">03</span>
+            <h3>Alertas directivas inmediatas</h3>
+            <p>Detecta quejas críticas y problemas recurrentes antes de que escalen.</p>
+          </article>
+          <article class="value-copy value-bottom-right floating-card">
+            <span class="number">04</span>
+            <h3>Claridad operativa</h3>
+            <p>Identifica qué sucede en cada sucursal y dónde conviene actuar primero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section capabilities">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">PainIndex</span>
+          <h2>Inteligencia de Negocios y Claridad Absoluta.</h2>
+          <p>En Inmega, desarrollamos estudios a la medida y suscripciones digitales para que usted sepa exactamente dónde invertir sus recursos.</p>
+        </div>
+        <div class="card-grid">
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></span>
+            <h3>Benchmarking Competitivo</h3>
+            <p>Audite a su competencia en tiempo real. Compare precios, servicio y posicionamiento para descubrir por qué los clientes eligen a otros.</p>
+          </article>
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+            <h3>Chat con Inteligencia Artificial</h3>
+            <p>Categoriza miles de reseñas automáticamente.</p>
+          </article>
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-bell" aria-hidden="true"></i></span>
+            <h3>Alertas Directivas Inmediatas</h3>
+            <p>Mitigue crisis antes de que escalen. Reciba notificaciones al instante sobre quejas de servicio y accione rápido en cualquiera de sus sucursales.</p>
+          </article>
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+            <h3>Reseñas centralizadas</h3>
+            <p>Centraliza las reseñas de Google Maps y Marketplaces.</p>
+          </article>
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+            <h3>Fuentes de datos</h3>
+            <p>Extraemos, procesamos y categorizamos reseñas de Google Maps, Yelp, Amazon y Marketplaces globales.</p>
+          </article>
+          <article class="feature-card floating-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
+            <h3>Análisis operativo</h3>
+            <p>Empresa B2B y SaaS especializada en análisis operativo, con operación nacional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section process" id="como-funciona">
+      <div class="container process-grid">
+        <div class="process-copy reveal">
+          <span class="eyebrow">Demostración e implementación</span>
+          <h2>¿Cuál es el proceso de demostración e implementación?</h2>
+          <p>Tras completar el formulario, nuestro equipo agendará una sesión ejecutiva de 30 minutos para presentar el Dashboard interactivo y estructurar su propuesta.</p>
+          <a class="button" href="#demo" data-demo-focus>Prueba la demo</a>
+        </div>
+        <div class="steps">
+          <article class="step-card floating-card reveal">
+            <span>01</span><i class="fa-solid fa-rectangle-list" aria-hidden="true"></i>
+            <h3>Formulario</h3>
+            <p>Complete la información sobre sus sucursales, reseñas y objetivo principal.</p>
+          </article>
+          <article class="step-card floating-card reveal">
+            <span>02</span><i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <h3>Sesión ejecutiva</h3>
+            <p>Nuestro equipo agendará una sesión ejecutiva de 30 minutos.</p>
+          </article>
+          <article class="step-card floating-card reveal">
+            <span>03</span><i class="fa-solid fa-display" aria-hidden="true"></i>
+            <h3>Dashboard interactivo</h3>
+            <p>Presentaremos el Dashboard interactivo aplicado a su operación.</p>
+          </article>
+          <article class="step-card floating-card reveal">
+            <span>04</span><i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+            <h3>Propuesta</h3>
+            <p>Estructuraremos su propuesta de acuerdo con la información compartida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section plan-section particles-section" id="plan">
+      <canvas class="particles" aria-hidden="true"></canvas>
+      <div class="container plan-grid">
+        <div class="plan-copy reveal">
+          <span class="eyebrow eyebrow-dark">Plan corporativo</span>
+          <h2>Suscripción PainIndex Corporativa</h2>
+          <p>Está diseñado exclusivamente para empresas corporativas, cadenas de retail y franquicias con un mínimo de 10 sucursales o alto volumen e-commerce.</p>
+          <div class="plan-points">
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Mínimo 10 sucursales operativas</span>
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> 3 usuarios gerenciales base incluidos</span>
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Usuarios extra por solo $20-$30 USD</span>
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Contratos desde 3 meses</span>
+          </div>
+          <a class="button button-light" href="#demo" data-demo-focus>Prueba la demo</a>
+        </div>
+        <div class="plan-visual floating-card reveal">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo directivo analizando información en una reunión" loading="lazy" width="1200" height="800">
+          <div class="photo-badge"><i class="fa-solid fa-building" aria-hidden="true"></i> B2B, SaaS e Inteligencia de Negocios</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section about">
+      <div class="container about-grid">
+        <div class="about-image floating-card reveal">
+          <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo colaborando alrededor de una mesa de trabajo" loading="lazy" width="1200" height="800">
+        </div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Inmega</span>
+          <h2>Inteligencia de Negocios y Claridad Absoluta.</h2>
+          <p>En Inmega, desarrollamos estudios a la medida y suscripciones digitales para que usted sepa exactamente dónde invertir sus recursos.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Empresa B2B y SaaS especializada en análisis operativo</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Operación nacional</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Analizando miles de interacciones digitales operativas diariamente</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Preguntas frecuentes sobre PainIndex</h2>
+          <p>Conozca el perfil de organización, las fuentes de datos y el proceso de demostración.</p>
+        </div>
+        <div class="accordion reveal">
+          <article class="faq-item is-open">
+            <button type="button" aria-expanded="true" aria-controls="faq1">¿A qué perfil de organización está dirigido PainIndex?<i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            <div id="faq1" class="faq-answer"><p>Está diseñado exclusivamente para empresas corporativas, cadenas de retail y franquicias con un mínimo de 10 sucursales o alto volumen e-commerce. No prestamos servicio a negocios de una sola sucursal.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq2">¿Qué canales y fuentes de datos analiza la plataforma?<i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            <div id="faq2" class="faq-answer" hidden><p>Extraemos, procesamos y categorizamos reseñas de Google Maps, Yelp, Amazon y Marketplaces globales.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq3">¿Cómo se estructura el esquema de licenciamiento por usuarios?<i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            <div id="faq3" class="faq-answer" hidden><p>Todos los planes base incluyen 3 usuarios gerenciales/directivos. Para expandir la cobertura en su estructura organizacional, se añaden licencias por solo $20 a $30 USD.</p></div>
+          </article>
+          <article class="faq-item">
+            <button type="button" aria-expanded="false" aria-controls="faq4">¿Cuál es el proceso de demostración e implementación?<i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            <div id="faq4" class="faq-answer" hidden><p>Tras completar el formulario, nuestro equipo agendará una sesión ejecutiva de 30 minutos para presentar el Dashboard interactivo y estructurar su propuesta.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section demo-section particles-section" id="demo">
+      <canvas class="particles" aria-hidden="true"></canvas>
+      <div class="container demo-grid">
+        <div class="demo-copy reveal">
+          <span class="eyebrow eyebrow-dark">Demostración ejecutiva</span>
+          <h2>Agende una Demostración Ejecutiva</h2>
+          <p>Solicite una sesión de 30 minutos. Le mostraremos cómo obtener la “bola de cristal” operativa y reputacional de su red de puntos de venta.</p>
+          <div class="demo-benefits">
+            <span><i class="fa-solid fa-clock" aria-hidden="true"></i> Sesión ejecutiva de 30 minutos</span>
+            <span><i class="fa-solid fa-display" aria-hidden="true"></i> Dashboard interactivo</span>
+            <span><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Estructura de su propuesta</span>
+          </div>
+        </div>
+
+        <form class="lead-form floating-card reveal" id="leadForm" novalidate>
+          <div class="form-head">
+            <h3>Agende una Demostración Ejecutiva</h3>
+            <p>Solicite una sesión de 30 minutos para conocer el Dashboard interactivo.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="nombre">Nombre y Apellidos</label>
+              <input id="nombre" name="nombre" autocomplete="name" placeholder="Nombre completo del tomador de decisión" required>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="correo">Correo Corporativo</label>
+              <input id="correo" name="correo" type="email" autocomplete="email" placeholder="email@empresa.com" required>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono de Contacto</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="numeric" maxlength="14" placeholder="Número a 10 dígitos" required>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field full">
+              <label for="sucursales">Número de Sucursales Operativas</label>
+              <select id="sucursales" name="sucursales" required>
+                <option value="">Seleccione una opción</option>
+                <option>Menos de 3</option>
+                <option>De 3 a 9</option>
+                <option>10 a 20</option>
+                <option>Más de 20</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field full">
+              <label for="reviews">Volumen Mensual de Reseñas por Sucursal</label>
+              <select id="reviews" name="reviews" required>
+                <option value="">Seleccione una opción</option>
+                <option>Menos de 10</option>
+                <option>10 a 15</option>
+                <option>Más de 15 reseñas al mes</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field full">
+              <label for="objetivo">Objetivo Principal de la Información</label>
+              <select id="objetivo" name="objetivo" required>
+                <option value="">Seleccione una opción</option>
+                <option>Análisis de Competencia</option>
+                <option>Alertas y Control Operativo</option>
+                <option>Centralización de Feedback</option>
+                <option>Evaluación de Personal y Precios</option>
+              </select>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field full consent">
+              <label><input type="checkbox" name="privacidad" required> Acepto que Inmega utilice mis datos para atender esta solicitud.</label>
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </div>
+          <button class="button submit-button" type="submit">
+            <span>Prueba la demo</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+          <p class="form-trust"><i class="fa-solid fa-lock" aria-hidden="true"></i> Sus datos se utilizarán únicamente para atender esta solicitud.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/525569789772?text=Hola%2C%20quiero%20conocer%20PainIndex%20y%20agendar%20una%20demostraci%C3%B3n." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logos/inmega-logo.png" alt="Inmega" width="183" height="58">
+        <p>B2B, SaaS e Inteligencia de Negocios.</p>
+      </div>
+      <div>
+        <h3>Producto</h3>
+        <a href="#capacidades">Capacidades</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#plan">Plan corporativo</a>
+      </div>
+      <div>
+        <h3>Inmega</h3>
+        <span>Monterrey, N.L., México</span>
+        <span>Operación nacional</span>
+        <span>Análisis operativo</span>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <span>Aviso de privacidad</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Inmega</span>
+      <a href="https://dinametra.com/" target="_blank" rel="noopener">Desarrollado por Dinametra.com</a>
+    </div>
+  </footer>
+</body>
+</html>
