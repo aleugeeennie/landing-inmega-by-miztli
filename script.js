@@ -22,7 +22,7 @@
   }));
 
   let savedTheme = null;
-  try { savedTheme = localStorage.getItem('inmegaTheme'); } catch (error) {}
+  try { savedTheme = localStorage.getItem('painIndexTheme'); } catch (error) {}
   if (savedTheme === 'night') document.body.classList.add('theme-night');
   const syncThemeIcon = () => {
     const icon = themeBtn?.querySelector('i');
@@ -33,7 +33,7 @@
   syncThemeIcon();
   themeBtn?.addEventListener('click', () => {
     document.body.classList.toggle('theme-night');
-    try { localStorage.setItem('inmegaTheme', document.body.classList.contains('theme-night') ? 'night' : 'light'); } catch (error) {}
+    try { localStorage.setItem('painIndexTheme', document.body.classList.contains('theme-night') ? 'night' : 'light'); } catch (error) {}
     syncThemeIcon();
   });
 
@@ -81,6 +81,7 @@
     else if (!field.value.trim()) message = 'Este campo es obligatorio.';
     else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) message = 'Escribe un correo válido.';
     else if (field.type === 'tel' && field.value.replace(/\D/g, '').length !== 10) message = 'Escribe un número a 10 dígitos.';
+    else if (field.name === 'sucursales' && Number(field.value) < 10) message = 'PainIndex está dirigido a operaciones con 10 o más sucursales.';
     wrapper?.classList.toggle('has-error', Boolean(message));
     field.setAttribute('aria-invalid', String(Boolean(message)));
     if (error) error.textContent = message;
@@ -104,7 +105,7 @@
     button.disabled = true;
     button.querySelector('span').textContent = 'Enviando…';
     const data = Object.fromEntries(new FormData(form).entries());
-    try { sessionStorage.setItem('inmegaLead', JSON.stringify(data)); } catch (error) {}
+    try { sessionStorage.setItem('painIndexLead', JSON.stringify(data)); } catch (error) {}
     setTimeout(() => { window.location.href = 'gracias.html'; }, 650);
   });
 

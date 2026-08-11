@@ -160,7 +160,7 @@ body.theme-night .button-ghost{border-color:#34585a}
 @keyframes ring{from{stroke-dasharray:0 164}to{stroke-dasharray:120 44}}
 @keyframes barGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pulse{50%{opacity:.35;transform:scale(1.3);transform-origin:center}}
-@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes floatIcon{0%,100%{transform:translate(var(--x,0),var(--y,0)) translateY(0)}50%{transform:translate(var(--x,0),var(--y,0)) translateY(-9px)}}
 @keyframes corePulse{50%{transform:scale(1.04)}}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -279,4 +279,94 @@ body.theme-night .brand-logo-dark{display:block}
   .nav-wrap{
     min-height:74px;
   }
+}
+
+
+/* === Ajustes PainIndex — minuta 4 agosto === */
+.painindex-brand{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--font-display);
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:-.04em;
+}
+.painindex-brand img{width:38px;height:38px;object-fit:contain}
+.footer-painindex-brand{display:flex;align-items:center;gap:10px}
+.footer-painindex-brand img{width:36px;height:36px;filter:none}
+.footer-painindex-brand strong{font-family:var(--font-display);font-size:24px;color:#fff}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  left:38%;top:12%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(18,184,134,.13),transparent 67%);
+  animation:jovialGlow 7s ease-in-out infinite;
+  pointer-events:none;
+}
+.feature-card,.step-card,.price-card{
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+.feature-card:hover,.step-card:hover,.price-card:hover{
+  transform:translateY(-10px) rotate(-.35deg);
+  border-color:rgba(18,184,134,.45);
+  box-shadow:0 24px 58px rgba(18,72,65,.14);
+}
+.steps.steps-three{grid-template-columns:repeat(3,1fr);align-items:stretch}
+.steps.steps-three .step-card{min-height:260px}
+
+.price-card{
+  min-height:420px;
+  border:1px solid rgba(143,239,209,.24);
+  border-radius:32px;
+  padding:44px;
+  background:
+    radial-gradient(circle at 78% 16%,rgba(143,239,209,.18),transparent 28%),
+    linear-gradient(145deg,#0e292b,#071718);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.24);
+}
+.price-kicker{
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:12px;
+  font-weight:800;
+  color:#95f3d8;
+}
+.price-card>strong{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  font-family:var(--font-display);
+  font-size:clamp(70px,9vw,118px);
+  line-height:1;
+  color:#fff;
+  margin:22px 0 18px;
+  letter-spacing:-.06em;
+}
+.price-card>strong small{font-size:.36em;color:#95f3d8}
+.price-card>strong em{font-style:normal;font-size:.2em;letter-spacing:.06em;color:#9db8b2}
+.price-card p{font-size:17px}
+.price-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.price-tags span{
+  border:1px solid rgba(143,239,209,.2);
+  background:rgba(255,255,255,.04);
+  padding:8px 11px;
+  border-radius:999px;
+  color:#dffbf2;
+  font-size:12px;
+  font-weight:700;
+}
+@keyframes jovialGlow{
+  0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.65}
+  50%{transform:translate3d(24px,-18px,0) scale(1.08);opacity:1}
+}
+@media (max-width:900px){
+  .steps.steps-three{grid-template-columns:1fr}
+  .price-card{min-height:360px}
 }
