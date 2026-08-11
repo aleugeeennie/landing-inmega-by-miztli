@@ -52,8 +52,9 @@ p{margin:0;color:var(--muted)}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .proof-line{margin-top:24px;font-weight:700;color:#355453;display:flex;align-items:center;gap:9px}
 .proof-line i{color:var(--green)}
-.dashboard-shell{border-radius:32px;padding:13px;background:linear-gradient(145deg,#daf3eb,#fff);box-shadow:var(--shadow);position:relative;z-index:3}
-.dashboard-svg{width:100%;height:auto;display:block;border-radius:24px}
+.dashboard-shell{border-radius:32px;padding:13px;background:linear-gradient(145deg,#daf3eb,#fff);box-shadow:var(--shadow);position:relative;z-index:3;overflow:hidden}
+.dashboard-svg{display:none}
+.platform-mockup{display:block;width:1078px;height:744px;border:0;border-radius:24px;background:#fff;overflow:hidden;transform-origin:top left}
 .hero-orb{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
 .hero-orb-one{width:430px;height:430px;right:-120px;top:110px;background:radial-gradient(circle,rgba(18,184,134,.18),transparent 70%)}
 .hero-orb-two{width:280px;height:280px;left:-90px;bottom:10px;background:radial-gradient(circle,rgba(143,211,194,.28),transparent 70%)}

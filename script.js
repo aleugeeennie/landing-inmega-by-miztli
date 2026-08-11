@@ -144,4 +144,20 @@
     });
   }
   document.querySelectorAll('.particles-section').forEach(initParticles);
+
+  const platformMockup = document.querySelector('.platform-mockup');
+  const mockupShell = platformMockup?.closest('.dashboard-shell');
+  if (platformMockup && mockupShell) {
+    const nativeWidth = 1078;
+    const nativeHeight = 744;
+    const shellPadding = 26;
+    const fitPlatformMockup = () => {
+      const availableWidth = Math.max(mockupShell.clientWidth - shellPadding, 1);
+      const scale = availableWidth / nativeWidth;
+      platformMockup.style.transform = `scale(${scale})`;
+      mockupShell.style.height = `${nativeHeight * scale + shellPadding}px`;
+    };
+    fitPlatformMockup();
+    new ResizeObserver(fitPlatformMockup).observe(mockupShell);
+  }
 })();
